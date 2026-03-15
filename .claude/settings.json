@@ -1,4 +1,17 @@
 {
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=\"$CLAUDE_TOOL_INPUT_FILE_PATH\"; case \"$FILE\" in *.ts|*.tsx|*.js|*.jsx|*.json|*.css|*.html|*.md) prettier --write \"$FILE\" 2>/dev/null ;; *.py) ruff format \"$FILE\" 2>/dev/null ;; *.rs) rustfmt \"$FILE\" 2>/dev/null ;; *.go) gofmt -w \"$FILE\" 2>/dev/null ;; esac; true"
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "allow": [
       "Bash(git status)",
