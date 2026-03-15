@@ -7,8 +7,6 @@ Keep it up to date as the project evolves — treat it as living documentation.
 
 ## Project Overview
 
-<!-- TODO: Replace with a 1–3 sentence description of what this project does and who it's for. -->
-
 **Elias-Lilla-Test-grej** is currently a minimal template/placeholder repository used for testing
 git workflows. No production application code exists yet.
 
@@ -26,22 +24,6 @@ git workflows. No production application code exists yet.
 ├── CLAUDE.md                  # This file
 └── Elias-testfil.txt          # Original test file
 ```
-
----
-
-## Development Commands
-
-<!-- TODO: Fill in the actual commands for this project once a tech stack is chosen. -->
-
-| Task        | Command             |
-|-------------|---------------------|
-| Install     | `<command>`         |
-| Dev server  | `<command>`         |
-| Build       | `<command>`         |
-| Test        | `<command>`         |
-| Lint        | `<command>`         |
-| Format      | `<command>`         |
-| Type check  | `<command>`         |
 
 ---
 
@@ -67,37 +49,6 @@ git workflows. No production application code exists yet.
 
 ---
 
-## Slash Commands
-
-These live in `.claude/commands/` and are available as `/command-name` in Claude Code.
-
-| Command            | Purpose                                                      |
-|--------------------|--------------------------------------------------------------|
-| `/code-simplifier` | Reviews changed code for over-engineering and cleans it up  |
-| `/verify-app`      | Runs a structured end-to-end verification of the app        |
-
----
-
-## Permissions & Safe Commands
-
-Pre-approved commands (no confirmation prompt) are listed in `.claude/settings.json`.
-
-**Always pre-approved:**
-- All `git` operations
-- `npm/yarn/pnpm install`, `npm run *`, `npm test`
-- `pip install`, `pytest`, `ruff`, `mypy`, `black`
-- `cargo build/test/clippy/fmt`
-- `go build/test/vet/fmt`
-- `make *`, `ls`, `cat`, `echo`, `which`, `pwd`
-
-**Always denied (will always prompt):**
-- `rm -rf *` — destructive file removal
-- Piping downloads directly into a shell (`curl | bash`)
-- `sudo` — privilege escalation
-- Writing to `/etc/`
-
----
-
 ## Code Conventions
 
 <!-- TODO: Update this section as conventions are established for your specific project. -->
@@ -107,26 +58,6 @@ Pre-approved commands (no confirmation prompt) are listed in `.claude/settings.j
 - **Commit style**: Concise imperative subject line, e.g. `Add login endpoint`
 - **Branch naming**: `feature/<slug>`, `fix/<slug>`, `chore/<slug>`
 - **PRs**: Keep them small and focused; one concern per PR
-
----
-
-## Architecture Notes
-
-<!-- TODO: Describe key architectural decisions, patterns, and constraints once the project grows. -->
-
-*No architecture to document yet.*
-
----
-
-## External Integrations
-
-<!-- TODO: List MCP tools, APIs, and services Claude can interact with. -->
-
-| Tool    | Purpose          | Config              |
-|---------|------------------|---------------------|
-| *(none yet)* | —           | —                   |
-
-To add MCP integrations (Slack, Sentry, BigQuery, etc.), add them to `.mcp.json` at the root.
 
 ---
 
